@@ -1,0 +1,9 @@
+numpy==1.21.6
+pandas==1.2.5
+tensorflow==2.8.0
+protobuf==3.20.1
+typing_extensions==3.7.4
+logzero==1.5.0
+django==3.2.20
+pyyaml==5.4.1
+requests==2.25.1
