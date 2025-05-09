@@ -3,79 +3,116 @@
 
 ## 📌 Project Overview
 
-This project aims to develop an intelligent chatbot system leveraging Natural Language Processing (NLP) techniques to provide automated and interactive customer support within the financial services domain. It is designed to simulate human-like conversations to assist users in resolving queries related to banking, insurance, investment, and other financial services.
+**VITAL-D Chat** (Virtual Intelligent Transactional Assistant for Logistics & Dialogue) is an intelligent virtual assistant designed to provide conversational financial assistance to users. It enables users to track expenses, receive financial insights, and manage personal finances through a natural language interface. The system leverages **Natural Language Processing (NLP)** and **machine learning models** with **GloVe word embeddings** for accurate intent recognition and response generation.
 
 ## 🎯 Objectives
 
-* To automate customer support using a smart chatbot that can handle diverse user queries related to financial services.
-* To reduce manual workload on human agents by offering accurate, 24/7 automated assistance.
-* To integrate a user-friendly interface that allows seamless interaction between customers and the chatbot.
-* To analyze and understand customer queries using NLP and respond with appropriate and relevant information.
+* To build a chatbot that offers automated financial assistance using NLP.
+* To help users track expenses, view analytics, and manage spending via natural conversation.
+* To ensure secure, personalized, and intelligent interaction with financial data.
 
 ## 🔧 Technologies Used
 
-* **Programming Language:** Python
-* **Frameworks/Libraries:** NLTK, TensorFlow/Keras (for ML models), Flask (for deployment)
-* **Tools:** Jupyter Notebook, Google Colab
-* **Database:** SQLite / NoSQL (optional, for storing user interaction logs)
-* **NLP Embeddings**	GloVe 
+| Component            | Technology                      |
+| -------------------- | ------------------------------- |
+| Programming Language | Python                          |
+| Web Framework        | Django                          |
+| Frontend             | HTML, CSS, JavaScript (AJAX)    |
+| Database             | SQLite                          |
+| NLP Embeddings       | GloVe (100-dimensional vectors) |
+| ML Libraries         | TensorFlow, Keras               |
+| Visualization        | Chart.js                        |
 
 ## 🧠 System Modules
 
-1. **User Interface (UI):**
+1. **User Interface**
 
-   * Enables users to input queries and view chatbot responses.
-   * Built with a simple and intuitive design for ease of use.
+   * Registration, login, chatbot interaction, and graphical analytics.
 
-2. **Natural Language Understanding (NLU):**
+2. **NLP Engine**
 
-   * Tokenization, Lemmatization, POS tagging, and Named Entity Recognition.
-   * Converts raw text into structured data.
+   * Uses GloVe embeddings to convert text to vectors.
+   * Processes intent and context using LSTM-based models.
 
-3. **Intent Classification & Response Generation:**
+3. **Intent Classification**
 
-   * Classifies user intent using machine learning models.
-   * Generates appropriate responses either from a pre-defined dataset or via dynamic logic.
+   * Classifies user queries into intents like balance check, spending, savings, etc.
 
-4. **Knowledge Base / FAQ Integration:**
+4. **Dialogue Manager**
 
-   * Provides information on financial services such as loans, insurance, accounts, etc.
+   * Uses sequence modeling to maintain conversation flow.
 
-5. **Training & Testing:**
+5. **Database Management**
 
-   * Utilizes labeled datasets for training.
-   * Model performance is evaluated using accuracy, precision, recall, etc.
+   * Stores user credentials, expense details, and transaction history securely.
 
 ## 🏗️ System Architecture
 
-```
-[User] ⇄ [Chat UI] ⇄ [Flask Server] ⇄ [NLP Engine] ⇄ [Knowledge Base]
-                                      ⇅
-                                 [ML Model]
+```mermaid
+graph TD
+  A[User Query] --> B[NLP Engine]
+  B --> C[Intent Detection (LSTM + GloVe)]
+  C --> D[Response Generator]
+  D --> E[Frontend Interface]
+  C --> F[Database (SQLite)]
 ```
 
 ## ✅ Features
 
-* 24/7 conversational assistance
-* Handles multiple financial topics
-* Context-aware responses
-* Easy to scale and integrate into financial service websites or applications
+* Natural language expense tracking
+* Categorical expense classification (food, transport, healthcare, etc.)
+* Visual analytics (Pie Chart)
+* Secure user authentication
+* Speech-to-text support
+* GloVe-based semantic understanding
 
-## 📈 Future Scope
+## Training images
 
-* Integration with live banking APIs
-* Speech-to-text capabilities for voice-based interaction
-* Multilingual support
-* Advanced sentiment analysis and personalization
+*NLU training:-
+![Screenshot 2025-04-04 165417](https://github.com/user-attachments/assets/854c86ca-71f1-4c9f-ac35-f80bc7524740)
+
+*Dialog training:-
+![Screenshot 2025-04-04 170643](https://github.com/user-attachments/assets/64c3b786-af11-4b35-b377-3b8a54bbc8fc)
+
+## 📊 Model Accuracy
+
+| Model             | Accuracy |
+| ----------------- | -------- |
+| Intent Classifier | 97.59%   |
+| Dialogue Model    | 93.33%   |
 
 ## 🚀 Getting Started
 
-1. Clone the repository.
-2. Install the required libraries using `pip install -r requirements.txt`.
-3. Run the Flask app using `python app.py`.
-4. Open `localhost:5000` in your browser to start chatting with the bot.
+```bash
+# Clone the repository
+git clone https://github.com/your-username/vital-d-chatbot.git
+cd vital-d-chatbot
 
-## 👥 Team
+# Create a virtual environment
+python -m venv venv
+source venv/bin/activate   # or venv\Scripts\activate on Windows
 
-Developed as a final-year engineering project by VENKATA TARAKA NADH NANDURI under the guidance of D.THIRUPATHAMMA.
+# Install dependencies
+pip install -r requirements.txt
 
+# Download GloVe embeddings
+python download_glove.py
+
+# Run the server
+python manage.py runserver
+```
+
+## 📈 Future Enhancements
+
+* Integrate real-time banking APIs
+* Add multilingual support
+* Use transformer-based models like BERT
+* Cloud deployment (e.g., AWS/GCP)
+
+## 👥 Project Members
+
+* **Venkata Taraka Nadh Nanduri** – 21KP1A6153
+* **Kothuri Leela Siva Sai** – 21KP1A6132
+* **Chinthabathini Vijay Kumar** – 21KP1A6107
+
+**Guide:** D. Thirupathamma, M.Tech (Assistant Professor, Dept. of CSE)
