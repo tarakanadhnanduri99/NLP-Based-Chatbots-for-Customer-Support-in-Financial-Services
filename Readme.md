@@ -46,16 +46,9 @@
 
    * Stores user credentials, expense details, and transaction history securely.
 
-## 🏗️ System Architecture
+## 🏗️ Application Architecture Diagram
 
-```mermaid
-graph TD
-  A[User Query] --> B[NLP Engine]
-  B --> C[Intent Detection (LSTM + GloVe)]
-  C --> D[Response Generator]
-  D --> E[Frontend Interface]
-  C --> F[Database (SQLite)]
-```
+![image](https://github.com/user-attachments/assets/e5ecf356-3fff-4d92-a8ce-d516e84c68e6)
 
 ## ✅ Features
 
