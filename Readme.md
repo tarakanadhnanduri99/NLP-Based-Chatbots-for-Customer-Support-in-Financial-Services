@@ -153,15 +153,16 @@ Console logs during model training using GloVe embeddings and LSTM-based neural 
 * Cloud deployment (e.g., AWS/GCP)
 
 ---
-## File Structure
+## 📁 Project Structure
+```
 FinancialBot/
-├── db.sqlite3
-├── download_glove.py
+├── db.sqlite3                      # SQLite database
+├── download_glove.py              # Script to download GloVe embeddings
 ├── FinBot/
 │   ├── __init__.py
 │   ├── admin.py
 │   ├── apps.py
-│   ├── data/
+│   ├── data/                      # Dialog datasets & GloVe embeddings
 │   │   ├── dialog_data.pkl
 │   │   ├── dialog_state.pkl
 │   │   ├── dialogs.yaml
@@ -173,50 +174,52 @@ FinancialBot/
 │   │   ├── __init__.py
 │   │   ├── 0001_initial.py
 │   │   └── 0002_auto_20201010_1653.py
-│   ├── models/
+│   ├── models/                    # Model logic (organized submodules)
 │   │   ├── dialog/
 │   │   ├── nlu/
 │   │   └── screenshot_training/
 │   ├── services/
-│   │   └── alert_service.py
-│   └── ... (other files)
-├── FinBot Diagrams/
+│   │   └── alert_service.py       # Backend service logic
+│   └── ...                        # Other app-related files
+├── FinBot Diagrams/              # UML diagrams
 │   ├── ACTIVITY DIAGRAM.pdf
 │   ├── SEQUENCE DIAGRAM.pdf
 │   └── STATE CHART.pdf
-├── FinBotFrontEnd/
+├── FinBotFrontEnd/               # Django project settings
 │   ├── __init__.py
 │   ├── asgi.py
 │   └── settings.py
-├── manage.py
+├── manage.py                     # Django management script
 ├── README.md
-├── requirements.txt
-├── run_dialog_training.py
-├── run_django.py
-├── run_training.py
-├── static/
+├── requirements.txt             # Python dependencies
+├── run_dialog_training.py       # Dialog training script
+├── run_django.py                # Custom Django runner
+├── run_training.py              # Training logic script
+├── static/                      # Static assets
 │   ├── css/
 │   ├── Images/
 │   ├── js/
 │   ├── style.css
 │   └── vendor/
-├── staticfiles/
+├── staticfiles/                 # Collected static files (after collectstatic)
 ├── temp/
-│   └── glove.6B.zip
-├── templates/
+│   └── glove.6B.zip             # Compressed embeddings
+├── templates/                   # Django templates
 │   ├── base.html
 │   ├── chart.html
 │   ├── index.html
 │   └── registration/
-├── training/
+├── training/                    # Dialog/NLU training screenshots & logic
 │   ├── dialog/
-│   └── ... (screenshots)
-├── venv/
-└── ... (other files)
+│   └── ...
+├── venv/                        # Python virtual environment
+└── ...                          # Other miscellaneous files
+```
+
 
 ---
 Note: The structure shown above includes only some of the key files and directories; it does not represent the complete contents of the project.
-* Note: This repository currently contains only a limited selection of files and directories from the full project. The complete codebase and all resources are not included here.
+* This repository currently contains only a limited selection of files and directories from the full project. The complete codebase and all resources are not included here.
 
 ## 👥 Team
 
