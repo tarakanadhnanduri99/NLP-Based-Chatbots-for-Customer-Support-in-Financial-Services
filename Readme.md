@@ -144,12 +144,79 @@ Console logs during model training using GloVe embeddings and LSTM-based neural 
 ![Screenshot 2025-04-04 170735](https://github.com/user-attachments/assets/6c84b102-90dd-42e6-aae1-6b299d813b6b)
 *Log from dialog model training process.*
 
+---
 ## 📈 Future Enhancements
 
 * Integrate real-time banking APIs
 * Add multilingual support
 * Use transformer-based models like BERT
 * Cloud deployment (e.g., AWS/GCP)
+
+---
+## File Structure
+FinancialBot/
+├── db.sqlite3
+├── download_glove.py
+├── FinBot/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── data/
+│   │   ├── dialog_data.pkl
+│   │   ├── dialog_state.pkl
+│   │   ├── dialogs.yaml
+│   │   └── glove/
+│   │       ├── glove.6B.100d.txt
+│   │       ├── glove.6B.200d.txt
+│   │       └── glove.6B.300d.txt
+│   ├── migrations/
+│   │   ├── __init__.py
+│   │   ├── 0001_initial.py
+│   │   └── 0002_auto_20201010_1653.py
+│   ├── models/
+│   │   ├── dialog/
+│   │   ├── nlu/
+│   │   └── screenshot_training/
+│   ├── services/
+│   │   └── alert_service.py
+│   └── ... (other files)
+├── FinBot Diagrams/
+│   ├── ACTIVITY DIAGRAM.pdf
+│   ├── SEQUENCE DIAGRAM.pdf
+│   └── STATE CHART.pdf
+├── FinBotFrontEnd/
+│   ├── __init__.py
+│   ├── asgi.py
+│   └── settings.py
+├── manage.py
+├── README.md
+├── requirements.txt
+├── run_dialog_training.py
+├── run_django.py
+├── run_training.py
+├── static/
+│   ├── css/
+│   ├── Images/
+│   ├── js/
+│   ├── style.css
+│   └── vendor/
+├── staticfiles/
+├── temp/
+│   └── glove.6B.zip
+├── templates/
+│   ├── base.html
+│   ├── chart.html
+│   ├── index.html
+│   └── registration/
+├── training/
+│   ├── dialog/
+│   └── ... (screenshots)
+├── venv/
+└── ... (other files)
+
+---
+Note: The structure shown above includes only some of the key files and directories; it does not represent the complete contents of the project.
+* Note: This repository currently contains only a limited selection of files and directories from the full project. The complete codebase and all resources are not included here.
 
 ## 👥 Team
 
