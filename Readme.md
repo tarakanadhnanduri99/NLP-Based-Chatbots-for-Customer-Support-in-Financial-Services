@@ -224,5 +224,6 @@ Note: The structure shown above includes only some of the key files and director
 ## 👥 Team
 
 * **Venkata Taraka Nadh Nanduri** – 21KP1A6153
+* **Alapati Indira Devi** - 21KP1A6102
 
 **Guide:** D. Thirupathamma, M.Tech (Assistant Professor, Dept. of CSE)
